@@ -2,6 +2,10 @@
 
 Based on the IMDB dataset, several models have been used in order to tackle the task of sentiment analysis.
 
-The first base line models are logistic regression and svm 
+The dataset can be download at the adress : https://ai.stanford.edu/~amaas/data/sentiment/
 
-A model from spacy was used for the embedding of the sentences.
+The language used is Python version 3.7.
+
+The first base line models are logistic regression and svm. Scikit-learn and spacy have been used for the models and the embedding of the sentences.
+
+
