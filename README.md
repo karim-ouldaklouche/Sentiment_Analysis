@@ -1,4 +1,4 @@
-# Sentiment_Analysis
+# Sentiment Analysis
 
 Based on the IMDB dataset, several models have been used in order to tackle the task of sentiment analysis.
 
@@ -38,4 +38,14 @@ The table above gives the accuracy and the F1 scores for the both models (train 
     <td>75.83 %</td>
   </tr>
 </table>
+
+To improve the scores, a recurrent neural network based on tensorflow 2 has been used.
+The architecture is composed of several layers :
+⋅⋅* One of embedding
+⋅⋅* Two bidirectionnal of LSTM layers
+⋅⋅* One final dense layer
+
+The test with one bidirectionnal LSTM layer has not given much better scores than the SVM and logistic regression. 
+
+
 
