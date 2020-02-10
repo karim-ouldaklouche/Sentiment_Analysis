@@ -10,10 +10,32 @@ The first base line models are logistic regression and svm. Scikit-learn and spa
 
 The table above gives the accuracy and the F1 scores for the both models (train and test set) :
 
-|			       |   SVM                     | Logistic Regression      ||
-|  ---       |:-----------:|:-----------:|:-----------:|:----------:|
-|             |  Acc        | F1          |    Acc      |     F1     |
-| Trainset   |  73.95 %    |  73.91 %    |  76.05 %    |  76.08 %   |
-| Testset    |  73.15 %    |  72.89 %    |  75.82 %    |  75.83 %   ||
-
+<table>
+  <tr>
+    <td></td>
+    <td colspan="2">SVM</td>
+    <td colspan="2">Logistic Regression</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Accuracy</td>
+    <td>F1</td>
+    <td>Accuracy</td>
+    <td>F1</td>
+  </tr>
+  <tr>
+    <td>Trainset</td>
+    <td>73.95 %</td>
+    <td>73.91 % </td>
+    <td>76.05 % </td>
+    <td>76.08 %</td>
+  </tr>
+  <tr>
+    <td>Testset</td>
+    <td>73.15 % </td>
+    <td>72.89 %</td>
+    <td>75.82 % </td>
+    <td>75.83 %</td>
+  </tr>
+</table>
 
