@@ -90,7 +90,7 @@ class SA_Preparate:
 
         return text
 
-    def get_embedding(self, dataset, nlp, type):
+    def get_embedding(self, dataset, nlp, typ):
         """
         Parameters : 
         dataset : DataFrame
@@ -100,14 +100,14 @@ class SA_Preparate:
         embedding : List 
         """
         start = time.time()
-        print('start embedding')
+        print('start embedding for type {}'.format(typ))
         embedding = []
 
         for index, row in dataset.iterrows():
             # print('Index : ',index)
             embedding.append(nlp(str(row['text_process'])).vector)
 
-        print('end embedding type {} in {} \n'.format(type, time.time()-start))
+        print('end embedding type {} in {} \n'.format(typ, time.time()-start))
         return embedding
 
     def dump_data_in_file(self, data, filename):
