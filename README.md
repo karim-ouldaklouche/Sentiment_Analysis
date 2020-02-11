@@ -16,9 +16,9 @@ The architecture is composed of several layers :
 
 A GPU version of tensorflow has been used on colab.research of google.
 
-For the moment the version of tensorflow is 1.15. While waiting the the version 2, the steps below cn be followed :
+For the moment the version of tensorflow is 1.15. While waiting the the version 2, the steps below can be followed :
 * !pip uninstall tensorflow
-* !pip instll tensorflow-gpu 
+* !pip install tensorflow-gpu 
 
 The table above gives the accuracy all the models (train and test set) :
 
