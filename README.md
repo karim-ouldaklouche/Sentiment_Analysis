@@ -28,16 +28,18 @@ The table above gives the accuracy all the models (train and test set) :
   <tr>
     <td>Trainset</td>
     <td>73.95 %</td>
-    <td>73.91 % </td>
+    <td>76.05 % </td>
     <td>94.67 %</td>
   </tr>
   <tr>
     <td>Testset</td>
     <td>73.15 % </td>
-    <td>72.89 %</td>
+    <td>75.82 %</td>
     <td>94.67 %</td>
   </tr>
 </table>
 
 We don't have any overfitting from the models according to the scores. Of course, improvements can be possible like a better preparation of the data, tuning the hyperparmeter for the differents models.
+
+After using tf.function in tensorflow, the next step is to implement the attention mecanism for the recurrent neural network. Indeed, some responses have a significant number of token. 
 
