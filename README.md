@@ -35,7 +35,7 @@ The table above gives the accuracy all the models (train and test set) :
     <td>Testset</td>
     <td>73.15 % </td>
     <td>75.82 %</td>
-    <td>94.67 %</td>
+    <td>88.68 %</td>
   </tr>
 </table>
 
