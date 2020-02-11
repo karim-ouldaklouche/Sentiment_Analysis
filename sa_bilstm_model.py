@@ -1,7 +1,7 @@
 
 import tensorflow as tf
 
-class SentimentAnalysisBiLSTMModel(tf.keras.Model):
+class SA_BiLSTMModel(tf.keras.Model):
   """
   The class implement an architecture of recurrent neural network with
   - one embedding layer
@@ -17,7 +17,7 @@ class SentimentAnalysisBiLSTMModel(tf.keras.Model):
       units : Integer
       dropout : Float
       """
-      super(SentimentAnalysisBiLSTMModel, self).__init__()
+      super(SA_BiLSTMModel, self).__init__()
 
       self.embedding = tf.keras.layers.Embedding(input_dim=vocab_size,
                                               input_length=input_length,
@@ -27,7 +27,6 @@ class SentimentAnalysisBiLSTMModel(tf.keras.Model):
       self.rnn1 = tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(units, return_sequences=True), 
                                               merge_mode='concat')
       self.rnn2 = tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(units), merge_mode='concat')
-
       self.fc = tf.keras.layers.Dense(1, activation='sigmoid')
 
   def call(self, inputs):
