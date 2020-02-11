@@ -47,5 +47,15 @@ The architecture is composed of several layers :
 
 The test with one bidirectionnal LSTM layer has not given much better scores than the SVM and logistic regression. 
 
-
+<table>
+  <tr>
+    <td>Trainset</td>
+    <td>Testset</td>
+  </tr>
+  <tr>
+    <td>Testset</td>
+    <td>94.67 % </td>
+    <td>88.78 %</td>
+  </tr>
+</table>
 
