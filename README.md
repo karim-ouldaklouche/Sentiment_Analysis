@@ -1,6 +1,6 @@
 # Sentiment Analysis
 
-Based on the IMDB dataset, several models have been used in order to tackle the task of sentiment analysis.
+Based on the IMDB dataset, several models have been used in order to do the task of sentiment analysis.
 
 The dataset can be download at the adress : [Dataset link](https://ai.stanford.edu/~amaas/data/sentiment/)
 
@@ -53,7 +53,6 @@ The test with one bidirectionnal LSTM layer has not given much better scores tha
     <td>Testset</td>
   </tr>
   <tr>
-    <td>Testset</td>
     <td>94.67 % </td>
     <td>88.78 %</td>
   </tr>
