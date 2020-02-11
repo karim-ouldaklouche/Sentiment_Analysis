@@ -8,13 +8,17 @@ The language used is Python version 3.7.
 
 The first base line models are logistic regression and svm. Scikit-learn and spacy have been used for the models and the embedding of the sentences.
 
-To improve the scores, a recurrent neural network based on tensorflow 2 has been used.
+To improve the scores, a recurrent neural network based on tensorflow 2.1.0 has been used.
 The architecture is composed of several layers :
 * One of embedding
 * Two bidirectionnal of LSTM layers
 * One final dense layer
 
-The test with one bidirectionnal LSTM layer has not given much better scores than the SVM and logistic regression. 
+A GPU version of tensorflow has been used on colab.research of google.
+
+For the moment the version of tensorflow is 1.15. While waiting the the version 2, the steps below cn be followed :
+* !pip uninstall tensorflow
+* !pip instll tensorflow-gpu 
 
 The table above gives the accuracy all the models (train and test set) :
 
