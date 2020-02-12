@@ -45,5 +45,5 @@ The table above gives the accuracy all the models (train and test set) :
 
 We don't have any overfitting from the models according to the scores. Of course, improvements can be possible like a better preparation of the data, tuning the hyperparmeter for the differents models.
 
-After using tf.function in tensorflow, the next step is to implement the attention mecanism for the recurrent neural network. Indeed, some responses have a significant number of token. 
+
 
