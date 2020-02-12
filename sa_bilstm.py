@@ -46,13 +46,13 @@ def main():
 
   BATCH_SIZE=64
 
-  train_dataset = tf.data.Dataset.from_tensor_slices((tensor_train,trainset['polarity'].values)).shuffle(BUFFER_SIZE_TRAIN)
+  train_dataset = tf.data.Dataset.from_tensor_slices((tensor_train,tf.expand_dims(trainset['polarity'],1))).shuffle(BUFFER_SIZE_TRAIN)
   train_dataset = train_dataset.batch(BATCH_SIZE, drop_remainder=True)
 
-  val_dataset = tf.data.Dataset.from_tensor_slices((tensor_val,valset['polarity'].values)).shuffle(BUFFER_SIZE_VAL)
+  val_dataset = tf.data.Dataset.from_tensor_slices((tensor_val,tf.expand_dims(valset['polarity'],1))).shuffle(BUFFER_SIZE_VAL)
   val_dataset = val_dataset.batch(BATCH_SIZE, drop_remainder=True)
 
-  test_dataset = tf.data.Dataset.from_tensor_slices((tensor_train,trainset['polarity'].values)).shuffle(BUFFER_SIZE_TEST)
+  test_dataset = tf.data.Dataset.from_tensor_slices((tensor_test,tf.expand_dims(testset['polarity'],1))).shuffle(BUFFER_SIZE_TEST)
   test_dataset = test_dataset.batch(BATCH_SIZE, drop_remainder=True)
 
   # Size of the vocabulary
@@ -92,12 +92,6 @@ def main():
                         batch_size=BATCH_SIZE)
 
   print(test_score)
-
-  train_score = model.evaluate(x=tensor_train, 
-                    y=trainset['polarity'].values,
-                        batch_size=BATCH_SIZE)
-
-  print(train_score)
   
 if __name__ == '__name__':
   main()
