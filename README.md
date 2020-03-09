@@ -20,6 +20,11 @@ For the moment the version of tensorflow is 1.15. While waiting the the version 
 * !pip uninstall tensorflow
 * !pip install tensorflow-gpu 
 
+There is another to use the version 2 of tensorflor with :
+* %tensorflow_version 2.x
+
+Unfortunalty, with this command, the GPU can be used.
+
 The table above gives the accuracy all the models (train and test set) :
 
 <table>
