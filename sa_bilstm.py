@@ -60,7 +60,7 @@ def main():
   print(vocab_size)
   
   steps_per_epoch = len(tensor_train) // BATCH_SIZE
-
+ 
   model = SA_BiLSTMModel(vocab_size=vocab_size, 
                 input_length=sa_Preparate.get_max_tensor(tensor_train),
                 output_dim=100,
@@ -69,16 +69,21 @@ def main():
   optimizer = tf.keras.optimizers.Adam(0.001)
   loss = tf.keras.losses.BinaryCrossentropy(from_logits=True)
 
+  early_stop = tf.keras.callbacks.EarlyStopping(monitor='loss')
+    
   model.compile(optimizer=optimizer,
             loss='binary_crossentropy',
             metrics=['accuracy'])
+  
+  EPOCHS = 10
 
   model.fit(x=tensor_train, 
                     y=trainset['polarity'].values,
                     validation_data=(tensor_val, 
                     valset['polarity'].values),
                     batch_size=BATCH_SIZE,
-                    epochs=3)
+                    epochs=EPOCHS,
+                    callbacks=[early_stop])
 
   checkpoint_dir = './sa_bilstm_checkpoint'
   checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
