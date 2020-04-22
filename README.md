@@ -6,7 +6,7 @@ The dataset can be download at the adress : [Dataset link](https://ai.stanford.e
 
 The language used is Python version 3.7.
 
-The first base line models are logistic regression and svm. Scikit-learn and spacy have been used for the models and the embedding of the sentences.
+The first baseline models are logistic regression and svm. Scikit-learn and spacy have been used for the models and the embedding of the sentences.
 
 To improve the scores, a recurrent neural network based on tensorflow 2.1.0 has been used.
 The architecture is composed of several layers :
@@ -14,16 +14,7 @@ The architecture is composed of several layers :
 * Two bidirectionnal of LSTM layers
 * One final dense layer
 
-A GPU version of tensorflow has been used on colab.research of google.
-
-For the moment the version of tensorflow is 1.15. While waiting the the version 2, the steps below can be followed :
-* !pip uninstall tensorflow
-* !pip install tensorflow-gpu 
-
-There is another to use the version 2 of tensorflor with :
-* %tensorflow_version 2.x
-
-Unfortunalty, with this command, the GPU can be used.
+A GPU version of tensorflow 2 has been used on colab.research of google.
 
 The table above gives the accuracy all the models (train and test set) :
 
